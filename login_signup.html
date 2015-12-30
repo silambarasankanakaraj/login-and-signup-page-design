@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<title>Login page</title>
+		<link rel="stylesheet" type="text/css" href="login.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>LOGIN</h1>
+			<form name="login">
+				Username<br><input type="text" name="userid"/><br>
+				Password<br><input type="password" name="pswrd"/><br>
+				<input id="persist_box" type="checkbox"><label>Keep me logged in</label><br><br>
+				<input type="button" onclick="check(this.form)" value="Login"/>
+				<input type="reset" value="Cancel"/>
+			</form>
+			<form names="sign">
+				<h2>Create an account</h2>
+				First name<br><input type="text" name="firstname" placeholder="first name" pattern='[A-Za-z\\s]*'/><br>
+				Surname<br><input type="text" name="surname" placeholder="surname" pattern='[A-Za-z\\s]*'/><br>
+				Email<br><input type="email" name="email" placeholder="Email or phone num"><br>
+				password<br><input name="pass" placeholder="password" type="password"><br>
+				Re-enter password<br><input name="pass1" placeholder="password" type="password"><br>
+				Gender<br>
+				<input name="female" value="1" id="u_0_d" type="radio"><label class="_58mt" for="u_0_d">Female</label></span>
+				<input name="male" value="2" id="u_0_e" type="radio"><label class="_58mt" for="u_0_e">Male</label></span><br><br>
+
+				Birthday<br>
+				<select name = "day">
+				<option value="0" selected="1">Day</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option></select>
+				<select name="month">
+				<option value="0" selected="1">Month</option>
+				<option value="1">Jan</option>
+				<option value="2">Feb</option>
+				<option value="3">Mar</option>
+				<option value="4">Apr</option>
+				<option value="5">May</option>
+				<option value="6">Jun</option>
+				<option value="7">Jul</option>
+				<option value="8">Aug</option>
+				<option value="9">Sept</option>
+				<option value="10">Oct</option>
+				<option value="11">Nov</option>
+				<option value="12">Dec</option></select>
+				<select name="year">
+				<option value="0" selected="1">Year</option>
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+				<option value="2011">2011</option>
+				<option value="2010">2010</option>
+				<option value="2009">2009</option>
+				<option value="2008">2008</option>
+				<option value="2007">2007</option>
+				<option value="2006">2006</option>
+				<option value="2005">2005</option>
+				<option value="2004">2004</option>
+				<option value="2003">2003</option>
+				<option value="2002">2002</option>
+				<option value="2001">2001</option>
+				<option value="2000">2000</option></select>
+				<br>
+
+
+				<input id="persist_box" name="tick" type="checkbox">By clicking Create an account, you agree to our <a href="/legal/terms" target="_blank" rel="nofollow">Terms</a> and that you have read our <a href="/about/privacy" target="_blank" rel="nofollow">Data Policy</a>, including our <a href="/help/cookies" target="_blank" rel="nofollow">Cookie Use</a><br><br>
+				<input type="button" onclick="valid(this.form)" value="Signup"/>
+			</form>
+			<script language="javascript">
+				function check(form)
+				{
+					if(form.userid.value == "simbu" && form.pswrd.value == "simbu123")
+						{
+						    window.open('target.html')
+						}
+					else
+						{
+						   alert("incorrect Password or Username")
+						}
+				}
+			</script>
+			<script language="javascript">
+				function valid(form)
+
+				// var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				{
+					if(form.firstname.value == "")
+						{
+							alert("enter the firstname")
+						}
+					else if(form.surname.value == "")
+						{
+							alert("enter the surname")
+						}
+					else if(form.email.value == "")
+						{
+							alert("enter the email")
+						}
+					else if(form.pass.value == "")
+						{
+							alert("enter the password");
+						}
+					else if(form.pass1.value == "")
+						{
+							alert("RE-enter the password");
+						}
+					else if((form.pass.value)!=(form.pass1.value))
+						{
+								alert("password doenot match");
+							
+						}
+					else if((form.female.checked == false) && (form.male.checked == false))
+						{
+							alert("select gender")
+						}
+						else if(form.day.value == 0)
+						{
+							alert("select the day")
+						}
+						else if(form.month.value == 0)
+						{
+							alert("select the month")
+						}
+						else if(form.year.value == 0)
+						{
+							alert("select the year")
+						}
+					else if(form.tick.checked == false) 
+						{
+							alert("agree the t&c")
+						}					
+					else
+						{
+							window.open('target1.html')
+						}
+				}
+			</script>
+		</div>
+	</body>
+</html>
